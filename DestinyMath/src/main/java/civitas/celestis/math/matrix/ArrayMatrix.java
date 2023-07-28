@@ -191,6 +191,31 @@ public class ArrayMatrix implements Matrix {
     }
 
     //
+    // Equality
+    //
+
+    /**
+     * Checks for equality.
+     * @param obj Object to compare to
+     * @return {@code true} if given object is a matrix, and all components are equal
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof ArrayMatrix m)) return false;
+        if (!size().equals(m.size())) return false;
+
+        for (int r = 0; r < rows(); r++) {
+            for (int c = 0; c < columns(); c++) {
+                if (values[r][c] != m.values[r][c]) return false;
+            }
+        }
+
+        return true;
+    }
+
+
+    //
     // Util
     //
 
