@@ -1,12 +1,5 @@
 package civitas.celestis.math;
 
-import civitas.celestis.math.matrix.*;
-import civitas.celestis.math.vector.Vector2;
-import civitas.celestis.math.vector.Vector3;
-import civitas.celestis.math.vector.Vector4;
-
-import javax.annotation.Nonnull;
-
 /**
  * <h2>Numbers</h2>
  * <p>A numerical utility class.</p>

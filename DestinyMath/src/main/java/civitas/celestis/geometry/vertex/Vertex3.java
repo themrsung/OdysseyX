@@ -76,6 +76,7 @@ public class Vertex3 implements Vertex<Vector3> {
 
     /**
      * Gets the surface normal of this vertex.
+     *
      * @return Surface normal
      */
     @Nonnull
