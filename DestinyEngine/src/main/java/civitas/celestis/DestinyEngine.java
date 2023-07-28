@@ -5,7 +5,21 @@ package civitas.celestis;
  * <p>The main class of Destiny.</p>
  */
 public final class DestinyEngine {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    /**
+     * Starts the engine.
+     */
+    public static void start() {
+
     }
+
+    /**
+     * Stops the engine.
+     */
+    public static void stop() {
+
+    }
+
+    //
+    // Modules
+    //
 }
