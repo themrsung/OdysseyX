@@ -1,4 +1,4 @@
-package civitas.celestis.geometry;
+package civitas.celestis.geometry.vertex;
 
 import civitas.celestis.math.vector.Vector3;
 
@@ -16,14 +16,14 @@ public class Vertex3 implements Vertex<Vector3> {
     /**
      * Creates a new vertex.
      *
-     * @param p1 Point 1
-     * @param p2 Point 2
-     * @param p3 Point 3
+     * @param a Point A
+     * @param b Point B
+     * @param c Point C
      */
-    public Vertex3(@Nonnull Vector3 p1, @Nonnull Vector3 p2, @Nonnull Vector3 p3) {
-        this.p1 = p1;
-        this.p2 = p2;
-        this.p3 = p3;
+    public Vertex3(@Nonnull Vector3 a, @Nonnull Vector3 b, @Nonnull Vector3 c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
 
     /**
@@ -32,46 +32,55 @@ public class Vertex3 implements Vertex<Vector3> {
      * @param other Vertex to copy
      */
     public Vertex3(@Nonnull Vertex3 other) {
-        this.p1 = other.p1;
-        this.p2 = other.p2;
-        this.p3 = other.p3;
+        this.a = other.a;
+        this.b = other.b;
+        this.c = other.c;
     }
 
     @Nonnull
-    private final Vector3 p1;
+    private final Vector3 a;
     @Nonnull
-    private final Vector3 p2;
+    private final Vector3 b;
     @Nonnull
-    private final Vector3 p3;
+    private final Vector3 c;
 
     @Nonnull
     @Override
-    public Vector3 p1() {
-        return p1;
-    }
-
-    @Nonnull
-    @Override
-    public Vector3 p2() {
-        return p2;
+    public Vector3 a() {
+        return a;
     }
 
     @Nonnull
     @Override
-    public Vector3 p3() {
-        return p3;
+    public Vector3 b() {
+        return b;
+    }
+
+    @Nonnull
+    @Override
+    public Vector3 c() {
+        return c;
     }
 
     @Nonnull
     @Override
     public List<Vector3> points() {
-        return List.of(p1, p2, p3);
+        return List.of(a, b, c);
     }
 
     @Nonnull
     @Override
     public Vector3 centroid() {
-        return p1.add(p2).add(p3).divide(3);
+        return a.add(b).add(c).divide(3);
+    }
+
+    /**
+     * Gets the surface normal of this vertex.
+     * @return Surface normal
+     */
+    @Nonnull
+    public Vector3 normal() {
+        return b.subtract(a).cross(c.subtract(a));
     }
 
     @Override

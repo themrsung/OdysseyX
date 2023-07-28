@@ -1,4 +1,4 @@
-package civitas.celestis.geometry;
+package civitas.celestis.geometry.vertex;
 
 import civitas.celestis.math.vector.Vector;
 
@@ -15,26 +15,26 @@ public interface Vertex<V extends Vector> extends Iterable<V> {
     /**
      * Gets the first point of this vertex.
      *
-     * @return Point 1
+     * @return Point A
      */
     @Nonnull
-    V p1();
+    V a();
 
     /**
      * Gets the second point of this vertex.
      *
-     * @return Point 2
+     * @return Point B
      */
     @Nonnull
-    V p2();
+    V b();
 
     /**
      * Gets the third point of this vertex.
      *
-     * @return Point 3
+     * @return Point C
      */
     @Nonnull
-    V p3();
+    V c();
 
     /**
      * Gets a list of points.

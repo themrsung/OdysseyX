@@ -1,6 +1,6 @@
 package civitas.celestis;
 
-import civitas.celestis.math.Numbers;
+import civitas.celestis.math.Numbers2;
 import civitas.celestis.math.matrix.Matrix3;
 import civitas.celestis.math.rotation.Rotation;
 import civitas.celestis.math.vector.Vector3;
@@ -16,6 +16,6 @@ public class MathTest {
         m1.fill(1);
         m2.fill(3);
 
-        System.out.println(Numbers.multiply(m1, Vector3.NEGATIVE_X));
+        System.out.println(Numbers2.multiply(m1, Vector3.NEGATIVE_X));
     }
 }
