@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
  * <h2>Numbers</h2>
  * <p>A numerical utility class.</p>
  */
-public class Numbers {
+public final class Numbers {
     /**
      * Denotes explicitly that a given field requires a finite value.
      *

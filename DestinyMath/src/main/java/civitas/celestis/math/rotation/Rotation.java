@@ -75,7 +75,7 @@ public class Rotation extends Vector4 {
      *
      * @return Angle in degrees
      */
-    public double angleDegrees() {
+    public double degrees() {
         return Math.toDegrees(w());
     }
 
