@@ -122,7 +122,7 @@ public class ArrayMatrix implements Matrix {
     @Nonnull
     @Override
     public Pointer ptr(int r, int c) throws IndexOutOfBoundsException {
-        final double v = get(r, c);
+        final double v = get(r, c); // Cache current value for consistency
         return new Pointer() {
             @Override
             public double get() {
