@@ -7,4 +7,5 @@
  * </p>
  */
 module DestinyEngine {
+    requires jsr305;
 }

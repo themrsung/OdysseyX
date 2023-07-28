@@ -5,4 +5,5 @@
  * </p>
  */
 module DestinyLibs {
+    requires jsr305;
 }
