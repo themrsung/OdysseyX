@@ -196,6 +196,7 @@ public class ArrayMatrix implements Matrix {
 
     /**
      * Checks for equality.
+     *
      * @param obj Object to compare to
      * @return {@code true} if given object is a matrix, and all components are equal
      */
