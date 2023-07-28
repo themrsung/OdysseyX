@@ -170,7 +170,7 @@ public class Numbers {
     /**
      * Multiplies two matrices.
      * If the two matrices' dimensions are different, the resulting matrix will have a dimension of
-     * {@code Math.max(m1.rows(), m2.rows()} and {@code Math.max(m1.columns(), m2.columns())}.
+     * {@code Math.max(m1.rows(), m2.rows())} and {@code Math.max(m1.columns(), m2.columns())}.
      *
      * @param m1 Matrix 1
      * @param m2 Matrix 2
