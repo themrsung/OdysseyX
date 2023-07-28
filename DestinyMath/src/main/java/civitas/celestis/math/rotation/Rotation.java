@@ -37,6 +37,18 @@ public class Rotation extends Vector4 {
     }
 
     /**
+     * Creates a new rotation.
+     *
+     * @param angle Angle in radians
+     * @param x     X value of axis
+     * @param y     Y value of axis
+     * @param z     Z value of axis
+     */
+    public Rotation(double angle, double x, double y, double z) {
+        super(angle, x, y, z);
+    }
+
+    /**
      * Creates a new rotation from a Vector4.
      *
      * @param other Vector to use
@@ -82,6 +94,17 @@ public class Rotation extends Vector4 {
     //
 
     /**
+     * Scales this rotation by given scalar.
+     *
+     * @param s Scalar to scale by
+     * @return Scaled rotation
+     */
+    @Nonnull
+    public Rotation scale(double s) {
+        return new Rotation(w() * s, x(), y(), z());
+    }
+
+    /**
      * Rotates this rotation by another rotation.
      *
      * @param r Rotation to rotate by
@@ -125,7 +148,7 @@ public class Rotation extends Vector4 {
      * @throws NumberFormatException When the string is not parsable to a rotation
      */
     @Nonnull
-    public static Rotation parseVector(@Nonnull String s) throws NumberFormatException {
+    public static Rotation parseRotation(@Nonnull String s) throws NumberFormatException {
         if (!s.startsWith("Rotation{")) throw new NumberFormatException("Given string is not a rotation.");
 
         final String[] strings = s

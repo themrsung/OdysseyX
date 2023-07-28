@@ -203,7 +203,7 @@ public class Quaternion extends Vector4 {
      * @throws NumberFormatException When the string is not parsable to a quaternion
      */
     @Nonnull
-    public static Vector4 parseVector(@Nonnull String s) throws NumberFormatException {
+    public static Vector4 parseQuaternion(@Nonnull String s) throws NumberFormatException {
         if (!s.startsWith("Quaternion{")) throw new NumberFormatException("Given string is not a quaternion.");
 
         final String[] strings = s

@@ -120,7 +120,6 @@ public class Vector4 implements Vector {
     // Vector-Scalar Arithmetic
     //
 
-
     @Nonnull
     @Override
     public Vector4 add(double s) {

@@ -1,5 +1,8 @@
 package civitas.celestis.math.vector;
 
+import civitas.celestis.math.quaternion.Quaternion;
+import civitas.celestis.math.rotation.Rotation;
+
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import java.io.Serializable;
@@ -77,4 +80,36 @@ public interface Vector extends Serializable {
      */
     @Nonnull
     Vector normalize();
+
+    /**
+     * Parses a string to a vector.
+     *
+     * @param s String to parse
+     * @return Parsed vector
+     * @throws NumberFormatException When the string is not parsable to a vector
+     */
+    @Nonnull
+    static Vector parse(@Nonnull String s) throws NumberFormatException {
+        try {
+            return Vector2.parseVector(s);
+        } catch (NumberFormatException e1) {
+            try {
+                return Vector3.parseVector(s);
+            } catch (NumberFormatException e2) {
+                try {
+                    return Vector4.parseVector(s);
+                } catch (NumberFormatException e3) {
+                    try {
+                        return Quaternion.parseQuaternion(s);
+                    } catch (NumberFormatException e4) {
+                        try {
+                            return Rotation.parseRotation(s);
+                        } catch (NumberFormatException e5) {
+                            throw new NumberFormatException("String is not a vector.");
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
