@@ -14,12 +14,17 @@ public enum MassUnit {
     POUND(2.20462),
     KILOGRAM(1),
     TON(0.001),
-    STARGATE(0.00003444722),
 
     /**
      * 1 tonne = 2000lbs
      */
-    IMPERIAL_TON(0.000984207);
+    IMPERIAL_TON(0.000984207),
+
+    /**
+     * One milky-way stargate.
+     */
+
+    STARGATE(0.00003444722);
 
     /**
      * Creates a new unit of mass.
