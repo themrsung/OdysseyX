@@ -12,13 +12,13 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * <h2>Scene3</h2>
+ * <h2>Scene</h2>
  * <p>
  * A three-dimensional scene.
- * Put this object inside an AWT component to ensure it runs on the GPU.
+ * Place this object inside an AWT component to ensure it runs on the GPU.
  * </p>
  */
-public class Scene3 {
+public class Scene {
     //
     // Constructors
     //
@@ -26,7 +26,7 @@ public class Scene3 {
     /**
      * Creates a new empty scene.
      */
-    public Scene3() {
+    public Scene() {
         this(new ArrayList<>());
     }
 
@@ -35,7 +35,7 @@ public class Scene3 {
      *
      * @param vertices List of vertices
      */
-    public Scene3(@Nonnull List<Vertex3> vertices) {
+    public Scene(@Nonnull List<Vertex3> vertices) {
         this.vertices = vertices;
     }
 
