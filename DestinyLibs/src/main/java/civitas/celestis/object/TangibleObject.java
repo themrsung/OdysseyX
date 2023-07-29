@@ -2,9 +2,11 @@ package civitas.celestis.object;
 
 import civitas.celestis.geometry.profile.Geometry;
 import civitas.celestis.geometry.solid.Solid;
+import civitas.celestis.geometry.vertex.Vertex3;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
+import java.util.List;
 
 public interface TangibleObject extends BaseObject {
     /**
@@ -46,6 +48,14 @@ public interface TangibleObject extends BaseObject {
      */
     @Nonnull
     Solid getSolid();
+
+    /**
+     * Gets a list of renderable vertices of this object.
+     *
+     * @return List of vertices
+     */
+    @Nonnull
+    List<Vertex3> getVertices();
 
     /**
      * Gets the current coefficient of drag of this object.
