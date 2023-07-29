@@ -51,4 +51,16 @@ public final class Numbers3 {
 
         return a * b < 0 && c * d * e >= 0;
     }
+
+    /**
+     * Given an input vector and a surface normal, this returns the reflection vector.
+     *
+     * @param in     Input vector
+     * @param normal Surface normal
+     * @return Reflection vector
+     */
+    @Nonnull
+    public static Vector3 reflection(@Nonnull Vector3 in, @Nonnull Vector3 normal) {
+        return in.subtract(normal.multiply(2 * in.dot(normal)));
+    }
 }

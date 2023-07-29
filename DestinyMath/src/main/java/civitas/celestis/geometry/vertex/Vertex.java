@@ -51,4 +51,13 @@ public interface Vertex<V extends Vector> extends Iterable<V> {
      */
     @Nonnull
     V centroid();
+
+    /**
+     * Inflates this vertex by given scalar.
+     *
+     * @param s Scale of inflation
+     * @return Scaled vertex
+     */
+    @Nonnull
+    Vertex<V> inflate(double s);
 }

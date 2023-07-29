@@ -74,6 +74,16 @@ public class Vertex2 implements Vertex<Vector2> {
         return a.add(b).add(c).divide(3);
     }
 
+    @Nonnull
+    @Override
+    public Vertex2 inflate(double s) {
+        return new Vertex2(
+                a.multiply(s),
+                b.multiply(s),
+                c.multiply(s)
+        );
+    }
+
     @Override
     public Iterator<Vector2> iterator() {
         return points().iterator();
