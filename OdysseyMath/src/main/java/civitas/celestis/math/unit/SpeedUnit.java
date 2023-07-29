@@ -13,7 +13,10 @@ public enum SpeedUnit {
     KILOMETERS_PER_HOUR(3.6),
     FEET_PER_SECOND(3.28084),
     MILES_PER_HOUR(2.23694),
-    METERS_PER_SECOND(1);
+    METERS_PER_SECOND(1),
+    LIGHT_SPEED(3.33555704e-9),
+    F_304_HYPERDRIVE(6.0923416e-17),
+    F_304_HYPERDRIVE_WITH_ZPM(9.5192838e-20);
 
     /**
      * Creates a new unit of speed.

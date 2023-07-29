@@ -17,7 +17,6 @@ public class MathTest {
         m1.fill(1);
         m2.fill(3);
 
-        System.out.println(SpeedUnit.MILES_PER_HOUR.convert(SpeedUnit.FEET_PER_SECOND, 300));
-        System.out.println(LengthUnit.MICROMETER.convert(LengthUnit.METER, 0.1));
+        System.out.println(SpeedUnit.F_304_HYPERDRIVE_WITH_ZPM.toMetersPerSecond(1));
     }
 }
