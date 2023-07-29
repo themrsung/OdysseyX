@@ -2,8 +2,10 @@ package civitas.celestis.math;
 
 import civitas.celestis.geometry.ray.Ray3;
 import civitas.celestis.geometry.vertex.Vertex3;
+import civitas.celestis.math.vector.Vector2;
 import civitas.celestis.math.vector.Vector3;
 
+import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 
 /**
@@ -62,5 +64,24 @@ public final class Numbers3 {
     @Nonnull
     public static Vector3 reflection(@Nonnull Vector3 in, @Nonnull Vector3 normal) {
         return in.subtract(normal.multiply(2 * in.dot(normal)));
+    }
+    /**
+     * Translates a 3D vector to a 2D coordinate system.
+     * <p>
+     * This assumes that Z represents depth,
+     * and inverts Y to be compatible with the AWT coordinate system.
+     * </p>
+     *
+     * @param v3          3D vector
+     * @param focalLength Focal length to use
+     * @return Translated 2D vector
+     */
+    @Nonnull
+    public static Vector2 translate(@Nonnull Vector3 v3, @Nonnegative double focalLength) {
+        final double z = ((focalLength / (focalLength + v3.z())));
+        return new Vector2(
+                z * v3.x(),
+                z * -v3.y()
+        );
     }
 }

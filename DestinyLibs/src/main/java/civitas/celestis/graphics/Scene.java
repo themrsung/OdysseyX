@@ -96,6 +96,13 @@ public class Scene {
         vertices.removeAll(v);
     }
 
+    /**
+     * Clears all data in this viewport.
+     */
+    public void clear() {
+        vertices.clear();
+    }
+
     //
     // Raytracing
     //

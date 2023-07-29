@@ -18,6 +18,7 @@ public final class DestinyEngine {
         // Start modules
         eventManager.start();
         scheduler.start();
+        worldManager.start();
     }
 
     /**
@@ -27,6 +28,7 @@ public final class DestinyEngine {
         // Stop modules
         scheduler.stop();
         eventManager.stop();
+        worldManager.stop();
     }
 
     //

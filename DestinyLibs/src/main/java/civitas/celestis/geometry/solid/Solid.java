@@ -63,6 +63,20 @@ public interface Solid {
     boolean overlaps(@Nonnull Solid other);
 
     /**
+     * Gets the volume of this solid.
+     * @return Volume
+     */
+    @Nonnegative
+    double volume();
+
+    /**
+     * Gets the surface area of this solid.
+     * @return Surface area
+     */
+    @Nonnegative
+    double surfaceArea();
+
+    /**
      * Gets a list of vertices to render.
      *
      * @return List of vertices
