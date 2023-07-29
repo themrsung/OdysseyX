@@ -13,7 +13,8 @@ public enum LengthUnit {
     INCH(39.3701),
     YARD(1.09361),
     METER(1),
-    KILOMETER(0.001);
+    KILOMETER(0.001),
+    LIGHT_YEAR(1.057e-13);
 
     /**
      * Creates a new unit of length.

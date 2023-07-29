@@ -14,6 +14,7 @@ public enum MassUnit {
     POUND(2.20462),
     KILOGRAM(1),
     TON(0.001),
+    STARGATE(0.00003444722),
 
     /**
      * 1 tonne = 2000lbs
