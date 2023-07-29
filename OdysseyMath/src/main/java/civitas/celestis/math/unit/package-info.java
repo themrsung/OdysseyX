@@ -16,7 +16,7 @@
  *         <li>Energy: Joules (J)</li>
  *         <li>Density: kilograms per cubic meter (kg/m3)</li>
  *     </ul>
- *     Other standards used by Destiny include:
+ *     Other standards used in Odyssey include:
  *     <ul>
  *         <li>Angle of rotation: radians</li>
  *         <li>Rate of rotation: radians per second</li>
