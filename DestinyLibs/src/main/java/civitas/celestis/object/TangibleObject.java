@@ -50,6 +50,22 @@ public interface TangibleObject extends BaseObject {
     Solid getSolid();
 
     /**
+     * Checks if this object overlaps a solid.
+     *
+     * @param solid Solid to check
+     * @return {@code true} if this object overlaps given solid
+     */
+    boolean overlaps(@Nonnull Solid solid);
+
+    /**
+     * Checks if this object overlaps another object.
+     *
+     * @param other Object to check
+     * @return {@code true} if this object overlaps given object
+     */
+    boolean overlaps(@Nonnull TangibleObject other);
+
+    /**
      * Gets a list of renderable vertices of this object.
      *
      * @return List of vertices

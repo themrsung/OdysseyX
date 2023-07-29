@@ -1,6 +1,7 @@
 package civitas.celestis.util;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -21,6 +22,29 @@ public record Pair<T>(
         @Nonnull T first,
         @Nonnull T second
 ) implements Iterable<T> {
+    /**
+     * Given a list of elements, this returns all possible permutations of pairs.
+     * This assumes that the given list does not contain duplicate elements.
+     * A pair with itself will not be counted.
+     *
+     * @param list List to get pairs of
+     * @param <U>  Type of object
+     * @return List of all possible pairs
+     */
+    @Nonnull
+    public static <U> List<Pair<U>> of(@Nonnull List<U> list) {
+        final List<Pair<U>> pairs = new ArrayList<>();
+
+        list.forEach(o1 -> list.stream().filter(o -> !o.equals(o1)).forEach(o2 -> {
+            final Pair<U> p = new Pair<>(o1, o2);
+            if (pairs.contains(p)) return;
+
+            pairs.add(p);
+        }));
+
+        return pairs;
+    }
+
     /**
      * Checks if given object is contained within this pair.
      *

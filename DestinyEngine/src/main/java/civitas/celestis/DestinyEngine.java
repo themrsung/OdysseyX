@@ -2,6 +2,7 @@ package civitas.celestis;
 
 import civitas.celestis.event.lifecycle.EventManager;
 import civitas.celestis.task.lifecycle.Scheduler;
+import civitas.celestis.world.lifecycle.WorldManager;
 
 import javax.annotation.Nonnull;
 
@@ -32,7 +33,6 @@ public final class DestinyEngine {
     // Modules
     //
 
-
     /**
      * Gets the scheduler instance.
      *
@@ -53,6 +53,17 @@ public final class DestinyEngine {
         return eventManager;
     }
 
+    /**
+     * Gets the world manager instance.
+     *
+     * @return {@link WorldManager}
+     */
+    @Nonnull
+    public static WorldManager getWorldManager() {
+        return worldManager;
+    }
+
     private static final Scheduler scheduler = new Scheduler();
     private static final EventManager eventManager = new EventManager();
+    private static final WorldManager worldManager = new WorldManager();
 }
