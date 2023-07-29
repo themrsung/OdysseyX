@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
  * <h2>Matrix4</h2>
  * <p>A 4x4 matrix.</p>
  */
-public class Matrix4 extends ArrayMatrix implements Matrix {
+public class Matrix4 extends ArrayMatrix {
     /**
      * Creates a new empty matrix.
      */
