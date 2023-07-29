@@ -2,7 +2,6 @@ package civitas.celestis;
 
 import civitas.celestis.geometry.profile.SphericalGeometry;
 import civitas.celestis.gui.component.viewport.Viewport;
-import civitas.celestis.math.quaternion.Quaternion;
 import civitas.celestis.math.rotation.Rotation;
 import civitas.celestis.math.vector.Vector3;
 import civitas.celestis.object.RealisticObject;
@@ -16,9 +15,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.UUID;
 
-public class DestinyTest {
+public class OdysseyTest {
     public static void main(@Nonnull String[] args) {
-        DestinyEngine.start();
+        Odyssey.start();
 
         final World world = new RealisticWorld(
                 UUID.randomUUID(),
@@ -37,7 +36,7 @@ public class DestinyTest {
         o1.setRotationRate(new Rotation(Vector3.POSITIVE_Y, Math.toRadians(90)));
 
         world.addObject(o1);
-        DestinyEngine.getWorldManager().addWorld(world);
+        Odyssey.getWorldManager().addWorld(world);
 
         final JFrame frame = new JFrame("Test");
         final Viewport viewport = new Viewport(world);
@@ -47,13 +46,13 @@ public class DestinyTest {
         frame.setSize(1920, 1080);
         frame.setVisible(true);
 
-        DestinyEngine.getScheduler().registerTask(delta -> viewport.renderAndRepaint());
+        Odyssey.getScheduler().registerTask(delta -> viewport.renderAndRepaint());
 
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 frame.dispose();
-                DestinyEngine.stop();
+                Odyssey.stop();
             }
         });
 

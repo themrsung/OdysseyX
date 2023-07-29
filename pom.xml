@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>civitas.celestis</groupId>
-    <artifactId>Destiny</artifactId>
+    <artifactId>OdysseyX</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>DestinyMath</module>
-        <module>DestinyEngine</module>
-        <module>DestinyLibs</module>
+        <module>OdysseyMath</module>
+        <module>OdysseyEngine</module>
+        <module>OdysseyLibs</module>
     </modules>
 
     <properties>

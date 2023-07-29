@@ -7,10 +7,10 @@ import civitas.celestis.world.lifecycle.WorldManager;
 import javax.annotation.Nonnull;
 
 /**
- * <h2>DestinyEngine</h2>
- * <p>The main class of Destiny.</p>
+ * <h2>Odyssey</h2>
+ * <p>The main class of Odyssey.</p>
  */
-public final class DestinyEngine {
+public final class Odyssey {
     /**
      * Starts the engine.
      */
