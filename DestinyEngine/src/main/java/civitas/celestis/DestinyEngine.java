@@ -45,6 +45,7 @@ public final class DestinyEngine {
 
     /**
      * Gets the event manager instance.
+     *
      * @return {@link EventManager}
      */
     @Nonnull

@@ -19,25 +19,9 @@ public @interface EventHandler {
     /**
      * Gets the priority of this event handler.
      *
-     * @return {@link Priority}
+     * @return {@link HandlerPriority}
      */
     @Nonnull
-    Priority priority() default Priority.NORMAL;
+    HandlerPriority priority() default HandlerPriority.NORMAL;
 
-    /**
-     * The priority of an event handler.
-     */
-    enum Priority {
-        PREEMPTIVE,
-        PRE_EARLY,
-        EARLY,
-        POST_EARLY,
-        PRE_NORMAL,
-        NORMAL,
-        POST_NORMAL,
-        PRE_LATE,
-        LATE,
-        POST_LATE,
-        MONITOR
-    }
 }
