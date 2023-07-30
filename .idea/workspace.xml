@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcd65467-1341-4de8-82ef-f7832d6dca40" name="Changes" comment="Stuff you can do when you make your own engine ;)">
+    <list default="true" id="fcd65467-1341-4de8-82ef-f7832d6dca40" name="Changes" comment="Fixed comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OdysseyMath/src/main/java/civitas/celestis/math/unit/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/OdysseyMath/src/main/java/civitas/celestis/math/unit/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OdysseyEngine/src/test/java/civitas/celestis/OdysseyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/OdysseyEngine/src/test/java/civitas/celestis/OdysseyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.OdysseyTest">
     <configuration name="MathTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="civitas.celestis.MathTest" />
       <module name="OdysseyMath" />
@@ -51,8 +51,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OdysseyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="civitas.celestis.OdysseyTest" />
+      <module name="OdysseyEngine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="civitas.celestis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OdysseyTest" />
         <item itemvalue="Application.MathTest" />
       </list>
     </recent_temporary>
@@ -74,11 +88,20 @@
       <option name="project" value="LOCAL" />
       <updated>1690643306612</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed comments">
+      <option name="closed" value="true" />
+      <created>1690644834272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690644834272</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Stuff you can do when you make your own engine ;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stuff you can do when you make your own engine ;)" />
+    <MESSAGE value="Fixed comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed comments" />
   </component>
 </project>

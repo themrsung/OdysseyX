@@ -43,7 +43,7 @@ public class OdysseyTest {
 
         frame.add(viewport);
 
-        frame.setSize(1920, 1080);
+        frame.setSize(1280, 720);
         frame.setVisible(true);
 
         Odyssey.getScheduler().registerTask(delta -> viewport.renderAndRepaint());
